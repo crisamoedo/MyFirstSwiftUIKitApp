@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAy-We-pQl">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,17 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-hn-2Ed">
-                                <rect key="frame" x="155.66666666666666" y="424.66666666666669" width="81.666666666666657" height="28"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Suscríbete" cornerStyle="medium" titleAlignment="center">
+                                <rect key="frame" x="128.66666666666666" y="446.66666666666669" width="135.99999999999997" height="28"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Click para ver a Dino" cornerStyle="medium" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapOnSuscribeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sj6-r4-qEr"/>
+                                    <segue destination="2xK-VM-deY" kind="show" id="Ydf-a0-qnl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="crisamoedo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdH-xs-6R6">
-                                <rect key="frame" x="110.66666666666669" y="320" width="172" height="53"/>
+                                <rect key="frame" x="110.66666666666669" y="342" width="172" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="172" id="LbI-rG-RlH"/>
                                     <constraint firstAttribute="height" constant="53" id="n6P-eY-g2P"/>
@@ -46,15 +48,47 @@
                             <constraint firstItem="CSa-hn-2Ed" firstAttribute="top" secondItem="tdH-xs-6R6" secondAttribute="bottom" constant="51.666666666666686" id="xlu-bj-YaW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3w6-BS-b3r"/>
                     <connections>
-                       
                         <outlet property="suscribeButton" destination="CSa-hn-2Ed" id="tV8-tc-k0p"/>
-                        <outlet property="userLabel" destination="tdH-xs-6R6" id="12j-bh-SUC"/>
+                        <outlet property="userLabel" destination="tdH-xs-6R6" id="2Wc-mW-MLQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xwl-pr-ePA">
+            <objects>
+                <navigationController id="rAy-We-pQl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n10-Mu-GFV">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DhK-P2-h9H"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gf2-dv-wqQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="-27"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xhX-ur-xDN">
+            <objects>
+                <viewController id="2xK-VM-deY" customClass="DetailViewController" customModule="SwiftPrueba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qds-xr-O70">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RAk-ew-YVc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D3h-W5-qyg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTs-ul-uSG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="-27"/>
         </scene>
     </scenes>
     <resources>
