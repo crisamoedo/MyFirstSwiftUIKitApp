@@ -16,20 +16,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-hn-2Ed">
-                                <rect key="frame" x="140" y="115" width="113" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Botón" cornerStyle="medium" titleAlignment="center">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-hn-2Ed">
+                                <rect key="frame" x="155.66666666666666" y="424.66666666666669" width="81.666666666666657" height="28"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Suscríbete" cornerStyle="medium" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnSuscribeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sj6-r4-qEr"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="crisamoedo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdH-xs-6R6">
+                                <rect key="frame" x="110.66666666666669" y="320" width="172" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="LbI-rG-RlH"/>
+                                    <constraint firstAttribute="height" constant="53" id="n6P-eY-g2P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CSa-hn-2Ed" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="F1L-62-Ulz"/>
+                            <constraint firstItem="tdH-xs-6R6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="h9s-ab-ZF1"/>
+                            <constraint firstItem="CSa-hn-2Ed" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pMb-96-nyw"/>
+                            <constraint firstItem="CSa-hn-2Ed" firstAttribute="top" secondItem="tdH-xs-6R6" secondAttribute="bottom" constant="51.666666666666686" id="xlu-bj-YaW"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="CSa-hn-2Ed" id="PlR-qL-Vh3"/>
+                       
+                        <outlet property="suscribeButton" destination="CSa-hn-2Ed" id="tV8-tc-k0p"/>
+                        <outlet property="userLabel" destination="tdH-xs-6R6" id="12j-bh-SUC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
