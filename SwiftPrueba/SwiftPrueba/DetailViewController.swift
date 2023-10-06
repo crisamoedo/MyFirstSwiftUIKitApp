@@ -12,7 +12,7 @@ class DetailViewController: UIViewController{
     private let onBoardinImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "dino")
+        imageView.image = UIImage(named: "rickandmorty")
         //nos va a permitir añadir las constraints por código
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -23,7 +23,7 @@ class DetailViewController: UIViewController{
         view.addSubview(onBoardinImageView)
         NSLayoutConstraint.activate([onBoardinImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
                                      
-            onBoardinImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+                                     onBoardinImageView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor)
 ])
     }
 }

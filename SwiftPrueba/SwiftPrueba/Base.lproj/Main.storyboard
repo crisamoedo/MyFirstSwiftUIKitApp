@@ -18,8 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-hn-2Ed">
-                                <rect key="frame" x="128.66666666666666" y="446.66666666666669" width="135.99999999999997" height="28"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Click para ver a Dino" cornerStyle="medium" titleAlignment="center">
+                                <rect key="frame" x="144.33333333333334" y="446.66666666666669" width="104.33333333333334" height="28"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Rick and Morty" cornerStyle="medium" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
